@@ -25,37 +25,56 @@
         </div>
     </div>
     <header class="header">
-            <div class="header__header-column"></div>
+            <div class="header__header-column">
+                <div class="header__back-btn">
+                    <a href="more.html" class="header__back-btn">
+                        <i class="fas fa-arrow-left fa-2x"></i>
+                    </a>
+                </div>
                 <h1 class="header__title">Settings</h1>
-            <div class="header__header-column"></div>
+            </div>
+            <div class="header__header-column">
                 <span class="header__icon">
                     <i class="fas fa-search"></i>
                 </span>
-                
+            </div>          
     </header>
-    <nav class="nav">
-        <ul class="nav__list">
-           <li class="nav__list-item">
-               <a href="friends.html" class="nav__list-link">
-                 <i class="far fa-user"></i>
-               </a>
-            </li>
-           <li class="nav__list-item">
-               <a href="index.html" class="nav__list-link">
-                 <i class="far fa-comment"></i>
-               </a>
-            </li>
-           <li class="nav__list-item">
-               <a href="find.html" class="nav__list-link">
-                 <i class="fas fa-search"></i>
-               </a>
-            </li>
-           <li class="nav__list-item">
-               <a href="more.html" class="nav__list-link">
-                 <i class="fas fa-ellipsis-h"></i>
-               </a>
-            </li>
-        </ul>
-    </nav>
+    <main class="settings">
+        <section class="settings__sections">
+            <ul class="settings__list">
+                <li class="settings__setting">
+                    <span class="settings__icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <span class="settings__title">
+                        Privacy
+                    </span>
+                </li>
+
+            </ul>
+            <ul class="settings__list">
+                <li class="settings__setting">
+                    <span class="settings__icon">
+                        <i class="fas fa-bell"></i>
+                    </span>
+                    <span class="settings__title">
+                        Notifications
+                    </span>
+                </li>
+                
+            </ul>
+            <ul class="settings__list">
+                <li class="settings__setting">
+                    <span class="settings__icon">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <span class="settings__title">
+                        Friends
+                    </span>
+                </li>
+                
+            </ul>
+        </section>
+    </main>
 </body>
 </html>

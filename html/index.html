@@ -25,9 +25,10 @@
         </div>
     </div>
     <header class="header">
-            <div class="header__header-column"></div>
+            <div class="header__header-column">
                 <h1 class="header__title">Chats</h1>
-            <div class="header__header-column"></div>
+            </div>
+            <div class="header__header-column">
                 <span class="header__icon">
                     <i class="fas fa-search"></i>
                 </span>
@@ -35,29 +36,34 @@
                     <i class="fab fa-rocketchat"></i>
                 </span>
                 <span class="header__icon">
-                    <i class="fas fa-cog "></i>
+                    <a href="settings.html" class="href"> 
+                        <i class="fas fa-cog "></i>
+                    </a>
                 </span>
+            </div>
     </header>
     <main class="chats">
         <ul class="chats__list">
-            <li class="chats__chat chat">
-                <div class="chat__column">
-                    <img src="images/ike.jpg"  class="chat__avatar g-avatar">
-                    <div class="chat__content">
-                        <span class="chat__username">
-                            IKE
-                        </span>
-                        <span class="chat__preview">
-                            あれから あの 欠けた 月の 半分を 探して いつかは いつかは サクラの花咲く 満月の元へと
+            <a href="chat.html">
+                <li class="chats__chat chat">
+                    <div class="chat__column">
+                        <img src="images/ike.jpg"  class="chat__avatar g-avatar">
+                        <div class="chat__content">
+                            <span class="chat__username">
+                                IKE
+                            </span>
+                            <span class="chat__preview">
+                                あれから あの 欠けた 月の 半分を 探して いつかは いつかは サクラの花咲く 満月の元へと
+                            </span>
+                        </div>
+                    </div>
+                    <div class="chat__column">
+                        <span class="chat__timestamp">
+                            Yesterday
                         </span>
                     </div>
-                </div>
-                <div class="chat__column">
-                    <span class="chat__timestamp">
-                        Yesterday
-                    </span>
-                </div>
-            </li>
+                </li>
+            </a>
         </ul>
     </main>
 
