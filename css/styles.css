@@ -1,1 +1,20 @@
 @import "reset.css";
+@import "nav.css";
+@import "header.css";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
+@import "status-bar.css";
+
+body {
+  background-color: white;
+  padding: 10px 20px;
+  color: #020202;
+  font-family: "Open Sans";
+}
+
+a {
+  color: inherit; /*부모요소로부터 색깔을 받아옴. 현재 부모요소는 검은색 */
+}
+
+* {
+    box-sizing: border-box;
+}

@@ -1,0 +1,19 @@
+.nav {
+  position: fixed; /*position fixed를 할 경우에는 반드시 width를 설정해줘야 한다 */
+  padding: 20px 50px;
+  width: 100%;
+  background-color: #fcfcfc;
+  bottom: 0px;
+  left: 0px; /*fixed된 상태에서 위치설정*/
+  border-top: 1px solid #f7f7f7;
+}
+
+.nav .nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav i {
+  font-size: 20px;
+}
