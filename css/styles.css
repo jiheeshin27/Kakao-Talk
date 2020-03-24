@@ -1,8 +1,12 @@
+@import "more.css";
+@import "friend.css";
 @import "reset.css";
 @import "nav.css";
 @import "header.css";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
 @import "status-bar.css";
+@import "friends.css";
+@import "find.css";
 
 body {
   background-color: white;
@@ -13,8 +17,10 @@ body {
 
 a {
   color: inherit; /*부모요소로부터 색깔을 받아옴. 현재 부모요소는 검은색 */
+  text-decoration: none; /*링크 밑줄 없애는거*/
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  /*padding이 추가될 때 box가 그만큼 커지지 않게 해줘. */
 }

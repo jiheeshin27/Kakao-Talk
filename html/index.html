@@ -47,25 +47,26 @@
     <main class="chats">
       <ul class="chats__list">
         <a href="chat.html">
-          <li class="chats__chat chat">
-            <div class="chat__column">
-              <img src="images/ike.jpg" class="chat__avatar g-avatar" />
-              <div class="chat__content">
-                <span class="chat__username">
-                  IKE
-                </span>
-                <span class="chat__preview">
-                  あれから あの 欠けた 月の 半分を 探して いつかは いつかは
-                  サクラの花咲く 満月の元へと
-                </span>
-              </div>
+          <div class="chats__chat friend friend--lg ">
+            <div class="friend__column">
+                <img src="images/ike.jpg" class="g-avatar friend__avatar"></img>
+                <li class="friend__content">
+                    <span class="friend__name">
+                        IKE
+                    </span>
+                    <span class="friend__bottom-text">
+                        ...
+                    </span>
+                </li>
             </div>
             <div class="chat__column">
-              <span class="chat__timestamp">
-                Yesterday
-              </span>
+                
+                    <span class="chat__timestamp">
+                        Yesterday
+                    </span>
+                
             </div>
-          </li>
+          </div>
         </a>
       </ul>
     </main>
@@ -79,6 +80,9 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
+            <div class="nav__badge">
+              8
+            </div>
             <i class="fas fa-comment"></i>
           </a>
         </li>
