@@ -1,0 +1,28 @@
+.settings {
+  border-top: 1px solid #f7f7f7;
+}
+
+.settings .settings__sections {
+  padding: 30px 0px;
+  margin-left: 20px;
+}
+
+.settings__setting .settings__icon {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.settings__setting .settings__title {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.settings .settings__setting {
+  margin-bottom: 30px;
+}
+
+/* 만약 같은 클래스들중에서 마지막 것을 수정하고 싶다면,
+.settings .settings__setting:last-child {
+  margin-bottom 0;
+}
+이런식으로 구성! */
