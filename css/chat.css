@@ -2,8 +2,19 @@
   padding: 0;
   /*body는 기본적으로 padding을 가지고 있기 때문에 0으로 만들어 줌*/
 }
+
+.header-wrapper {
+  background-color: white;
+  padding: 5px 0px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
 .chat {
-  min-height: 100vh;
+  padding-top: 100px;
+  min-height: 200vh;
+}
+.chats-body {
   background-image: url("../html/images/white-waves.png");
 }
 
@@ -16,21 +27,74 @@
   margin-top: 10px;
 }
 
-.chat__write {
+.chat__write-container {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  bottom: 50px;
-  width: 80%;
-  display: flex;
-  background-color: #f7f7f7;
-  padding: 0px 20px;
-  border-radius: 40px;
-  margin: 0 auto;
+  bottom: 0px;
   left: 0;
   right: 0;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  display: flex;
+  width: 100%;
+
+  /*box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025); */
+}
+
+.chat__icon-left {
+  position: absolute;
+  left: 10px;
+}
+.chat__icon-right {
+  position: absolute;
+  right: 10px;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0px 30px 60px -12px rgba(50, 50, 93, 0.25),
+      0 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
+  50% {
+    box-shadow: 0px 30px 60px -60px rgba(50, 50, 93, 0.25),
+      0 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
+  100% {
+    box-shadow: 0px 30px 60px -12px rgba(50, 50, 93, 0.25),
+      0 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
+}
+
+.chat__write {
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0px;
+  padding: 20px 60px;
+  font-size: 14px;
+  border: none;
+  margin: 0 auto;
+  /*margin은 animate 할 수 없다 */
+}
+.chat__write:focus ~ .chat__icon {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  /* display: none; 을 안하는 이유는 그렇게하면 transition을 사용하지 못하기 때문이다. */
+}
+.chat__icon {
+  font-size: 18px;
+}
+
+.chat__write:focus {
+  outline: none;
+  width: 80%;
+  transform: translateY(-100px);
+  transition: width 0.5s ease-in-out, border-radious 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+  animation: float 3s linear infinite forwards;
+  border-radius: 40px;
 }
 
 .chat__write i {
@@ -121,4 +185,36 @@
 .sent-message .message__bubble {
   border-bottom-right-radius: 0px;
   background-image: linear-gradient(to left, #fffbd5, #b20a2c);
+}
+
+@keyframes incomingAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.incoming-message {
+  animation: incomingAnim 0.5s ease-out forwards;
+  /*forwards는 위 값이 끝날때까지 유지된다는거. 여기서는 to에 해당하는 
+  내용이 계속 유지됨. */
+}
+
+@keyframes sentAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sent-message {
+  animation: sentAnimation 0.5s ease-out forwards;
 }
