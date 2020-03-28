@@ -26,3 +26,18 @@ a {
   box-sizing: border-box;
   /*padding이 추가될 때 box가 그만큼 커지지 않게 해줘. */
 }
+
+@keyframes fadeIn {
+  from{
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to{
+    transform: none;
+    opacity: 1;
+  }
+}
+
+main{
+  animation: fadeIn 0.5s ease-out;
+}
