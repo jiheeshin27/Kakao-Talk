@@ -18,6 +18,7 @@ body {
   font-family: "Open Sans";
 }
 
+
 a {
   color: inherit; /*부모요소로부터 색깔을 받아옴. 현재 부모요소는 검은색 */
   text-decoration: none; /*링크 밑줄 없애는거*/
